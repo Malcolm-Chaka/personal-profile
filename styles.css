@@ -77,3 +77,15 @@ body {
         padding: 15px;
     }
 }
+/* Hide sections by default except active */
+.section {
+    display: none;
+}
+.section.active {
+    display: block;
+}
+
+/* Centering the profile image */
+img.rounded-circle {
+    border: 3px solid #333;
+}
