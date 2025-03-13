@@ -1,79 +1,22 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    text-align: center;
+/* Profile Image Above Navbar */
+.profile-header {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
 }
 
-/* Navigation Bar */
+/* Adjust Navbar Position */
 .nav {
     background-color: #333;
     padding: 10px;
-    position: fixed;
+    position: relative;
     width: 100%;
     top: 0;
     left: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
-}
-
-.nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    transition: 0.3s;
-}
-
-.nav a:hover {
-    background-color: #555;
-    border-radius: 5px;
-}
-
-/* Sections */
-.container {
-    display: none;
-    padding: 80px 20px;
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin-top: 60px;
-}
-
-.section.active {
-    display: block;
-}
-
-/* Profile Image */
-.container img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-/* Contact Section */
-#contact p {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        align-items: center;
-    }
-    .nav a {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 15px;
-    }
 }
