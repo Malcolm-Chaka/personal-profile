@@ -1,93 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
 body {
-    font-family: 'Orbitron', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-color: #0d0d0d;
-    color: #fff;
-    overflow: hidden;
+    background-color: #f4f4f4;
 }
-
-/* Navigation Bar */
 .nav {
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 15px 0;
+    background: #333;
+    padding: 10px 0;
     text-align: center;
-    position: fixed;
-    top: 0;
-    backdrop-filter: blur(10px);
 }
-
 .nav a {
-    color: cyan;
+    color: white;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 15px;
     font-size: 18px;
-    font-weight: bold;
-    transition: transform 0.3s ease-in-out, text-shadow 0.3s;
+    cursor: pointer;
 }
-
-.nav a:hover {
-    transform: scale(1.2);
-    text-shadow: 0 0 10px cyan, 0 0 20px cyan;
-}
-
-/* Container */
 .container {
     text-align: center;
-    background: rgba(20, 20, 20, 0.9);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-    margin-top: 80px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
-
-/* Profile Image */
 img {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid cyan;
-    box-shadow: 0 0 20px cyan;
-    transition: transform 0.3s ease-in-out;
 }
-
-img:hover {
-    transform: scale(1.1);
-}
-
-/* Headings */
 h1 {
     margin: 10px 0;
-    font-size: 28px;
-    text-transform: uppercase;
-    text-shadow: 0 0 15px cyan;
+    font-size: 24px;
 }
-
-/* Paragraphs */
 p {
-    color: #bbb;
-    font-size: 16px;
-    line-height: 1.6;
+    color: #555;
 }
-
-/* Section Visibility Animation */
 .section {
     display: none;
 }
-
 .active {
     display: block;
-    opacity: 1;
-    transform: translateY(0);
 }
