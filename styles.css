@@ -58,3 +58,12 @@ img.rounded-circle {
     background-color: #ffffff !important;
     color: #121212 !important;
 }
+/* Light Mode Background */
+body.bg-light {
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+}
+
+/* Dark Mode Background (removes gradient) */
+body.bg-dark {
+    background: #121212 !important;
+}
