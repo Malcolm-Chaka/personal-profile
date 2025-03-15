@@ -56,3 +56,37 @@ img.rounded-circle {
     background-color: #ffffff !important;
     color: #121212 !important;
 }
+
+/* Default Light Mode Background */
+body {
+    background: linear-gradient(to bottom right, #ffffff, #f0f0f0); /* Light gradient */
+    color: black;
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #121212 !important; /* Solid dark mode */
+    color: white;
+}
+
+/* Navbar Styling */
+.navbar {
+    transition: background 0.5s ease-in-out;
+    background: linear-gradient(to right, #007bff, #0056b3);
+}
+
+/* Dark Mode Navbar */
+.dark-mode .navbar {
+    background: linear-gradient(to right, #1a1a1a, #292929);
+}
+
+/* Hero Section */
+.hero {
+    background: url('Images/web-dev-bg.jpg') center/cover no-repeat;
+}
+
+/* Dark Mode Hero */
+.dark-mode .hero {
+    background: url('Images/web-dev-bg-dark.jpg') center/cover no-repeat;
+}

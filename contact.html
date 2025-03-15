@@ -57,27 +57,23 @@
     </div>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const darkModeToggle = document.getElementById("darkModeToggle");
-        const body = document.body;
-        
-        // Check localStorage for dark mode preference
-        if (localStorage.getItem("darkMode") === "enabled") {
-            body.classList.add("dark-mode");
-            darkModeToggle.innerText = "☀️"; // Switch to sun icon
-        }
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    const body = document.body;
 
-        darkModeToggle.addEventListener("click", function () {
-            if (body.classList.contains("dark-mode")) {
-                body.classList.remove("dark-mode");
-                localStorage.setItem("darkMode", "disabled");
-                darkModeToggle.innerText = "🌙"; // Moon icon for dark mode
-            } else {
-                body.classList.add("dark-mode");
-                localStorage.setItem("darkMode", "enabled");
-                darkModeToggle.innerText = "☀️"; // Sun icon for light mode
-            }
-        });
+    // Load the saved mode from localStorage
+    if (localStorage.getItem("darkMode") === "enabled") {
+        body.classList.add("dark-mode");
+    }
+
+    darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        // Save mode preference in localStorage
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("darkMode", "enabled");
+        } else {
+            localStorage.setItem("darkMode", "disabled");
+        }
     });
 </script>
 
