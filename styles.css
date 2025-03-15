@@ -4,8 +4,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-	background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-    color: white; /* Ensures text is readable */
 }
 
 /* Ensure Navbar Doesn't Overlap Content */
