@@ -126,7 +126,7 @@ body {
 
 /* Light Mode Background */
 .hero {
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
+    background: linear-gradient(120deg, #E6E6FA, #D8BFD8); /* Light lavender to pastel purple */
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
 }
@@ -292,4 +292,9 @@ body {
 body {
     margin: 0;
     padding: 0;
+}
+
+/* Hide light mode background in dark mode */
+.dark-mode .light-mode-bg {
+    display: none !important;
 }
