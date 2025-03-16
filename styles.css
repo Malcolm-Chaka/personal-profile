@@ -324,7 +324,7 @@ body.dark-mode {
 
 /* Light Mode Navbar */
 body.bg-light .navbar {
-    background: linear-gradient(to right, #B0E0E6, #ADD8E6); /* Pastel Blue Gradient */
+    background: linear-gradient(to right, #4A90E2, #1E3A8A); /* Darker Blue Gradient */ /* Pastel Blue Gradient */
 }
 
 /* Dark Mode Navbar */
