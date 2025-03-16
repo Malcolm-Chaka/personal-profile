@@ -126,7 +126,7 @@ body {
 
 /* Light Mode Background */
 .hero {
-    background: linear-gradient(120deg, #E6E6FA, #D8BFD8); /* Light lavender to pastel purple */
+    background: linear-gradient(120deg, #D8BFD8, #C8A2C8); /* Pastel Purple */ /* Light lavender to pastel purple */
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
 }
@@ -279,7 +279,7 @@ body {
 
 /* Light Mode Background */
 .light-mode-bg {
-    background: linear-gradient(120deg, #E6E6FA, #D8BFD8); /* Light lavender to pastel purple */
+    background: linear-gradient(120deg, #D8BFD8, #C8A2C8); /* Pastel Purple */ /* Light lavender to pastel purple */
     position: absolute;
     top: 0;
     left: 0;
@@ -297,4 +297,10 @@ body {
 /* Hide light mode background in dark mode */
 .dark-mode .light-mode-bg {
     display: none !important;
+}
+
+/* Remove gap between navbar and hero section */
+.hero-container {
+    margin-top: 0;
+    padding-top: 0;
 }
