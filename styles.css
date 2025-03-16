@@ -344,3 +344,20 @@ body.dark-mode .navbar {
     background: white !important;
     color: black !important;
 }
+
+/* Hero Section Gradient Background (Light Mode) */
+.hero-container {
+    background: linear-gradient(to bottom right, #D8BFD8, #E6E6FA);
+    padding-top: 80px; /* Ensures it does not overlap with the navbar */
+}
+
+/* Hero Section in Dark Mode */
+.dark-mode .hero-container {
+    background: linear-gradient(to bottom right, #1a1a1a, #292929);
+}
+
+/* Ensure navbar remains separate from hero section */
+.navbar {
+    position: relative;
+    z-index: 10;
+}
