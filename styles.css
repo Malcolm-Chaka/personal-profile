@@ -90,3 +90,23 @@ body {
 .dark-mode .hero {
     background: url('Images/web-dev-bg-dark.jpg') center/cover no-repeat;
 }
+
+/* Floating Card Effect */
+.floating-card {
+    background: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Hover Effect */
+.floating-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark Mode Floating Cards */
+.dark-mode .floating-card {
+    background: #1e1e1e;
+    color: white;
+}
