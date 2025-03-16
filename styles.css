@@ -126,7 +126,7 @@ body {
 
 /* Light Mode Background */
 .hero {
-    background: linear-gradient(120deg, #D8BFD8, #C8A2C8); /* Pastel Purple */ /* Light lavender to pastel purple */
+    background: linear-gradient(to bottom right, #D8BFD8, #E6E6FA); /* Static Pastel Purple Gradient */ /* Light lavender to pastel purple */
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
 }
@@ -279,7 +279,7 @@ body {
 
 /* Light Mode Background */
 .light-mode-bg {
-    background: linear-gradient(120deg, #D8BFD8, #C8A2C8); /* Pastel Purple */ /* Light lavender to pastel purple */
+    background: linear-gradient(to bottom right, #D8BFD8, #E6E6FA); /* Static Pastel Purple Gradient */ /* Light lavender to pastel purple */
     position: absolute;
     top: 0;
     left: 0;
@@ -303,4 +303,44 @@ body {
 .hero-container {
     margin-top: 0;
     padding-top: 0;
+}
+
+/* Light Mode Background */
+body.bg-light {
+    background: linear-gradient(to bottom right, #D8BFD8, #E6E6FA);
+    color: black;
+}
+
+/* Dark Mode Background */
+body.dark-mode {
+    background: #121212 !important;
+    color: white !important;
+}
+
+/* Navbar Styling for Both Modes */
+.navbar {
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Light Mode Navbar */
+body.bg-light .navbar {
+    background: linear-gradient(to right, #b39ddb, #9575cd);
+}
+
+/* Dark Mode Navbar */
+body.dark-mode .navbar {
+    background: linear-gradient(to right, #1a1a1a, #292929);
+}
+
+/* Ensure text visibility in both modes */
+.dark-mode .card, 
+.dark-mode .hero-card {
+    background: #1e1e1e !important;
+    color: white !important;
+}
+
+.light-mode .card, 
+.light-mode .hero-card {
+    background: white !important;
+    color: black !important;
 }

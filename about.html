@@ -96,7 +96,32 @@ script>
 </body>
 </html>
 
+
 <script>
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    const body = document.body;
+
+    // Check stored theme preference
+    if (localStorage.getItem("darkMode") === "enabled") {
+        body.classList.add("dark-mode");
+        body.classList.remove("bg-light");
+    } else {
+        body.classList.add("bg-light");
+        body.classList.remove("dark-mode");
+    }
+
+    darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        body.classList.toggle("bg-light");
+
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("darkMode", "enabled");
+        } else {
+            localStorage.setItem("darkMode", "disabled");
+        }
+    });
+</script>
+
     const darkModeToggle = document.getElementById("darkModeToggle");
     const body = document.body;
     const lightModeBg = document.querySelector(".light-mode-bg");
