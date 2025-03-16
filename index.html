@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-light">
+	<div class="light-mode-bg"></div>
 
     <!-- Bootstrap Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow sticky-top">
@@ -117,20 +118,26 @@
 <script>
     const darkModeToggle = document.getElementById("darkModeToggle");
     const body = document.body;
+    const lightModeBg = document.querySelector(".light-mode-bg");
 
-    // Load the saved mode from localStorage
+    // Check stored theme preference
     if (localStorage.getItem("darkMode") === "enabled") {
-        body.classList.add("dark-mode");
+        body.classList.add("bg-dark", "text-white");
+        if (lightModeBg) lightModeBg.style.display = "none"; // Hide light background in dark mode
     }
 
+    // Toggle dark mode
     darkModeToggle.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
-
-        // Save mode preference in localStorage
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("darkMode", "enabled");
-        } else {
+        if (body.classList.contains("bg-dark")) {
+            body.classList.remove("bg-dark", "text-white");
+            body.classList.add("bg-light", "text-dark");
+            if (lightModeBg) lightModeBg.style.display = "block"; // Show in light mode
             localStorage.setItem("darkMode", "disabled");
+        } else {
+            body.classList.remove("bg-light", "text-dark");
+            body.classList.add("bg-dark", "text-white");
+            if (lightModeBg) lightModeBg.style.display = "none"; // Hide in dark mode
+            localStorage.setItem("darkMode", "enabled");
         }
     });
 </script>
